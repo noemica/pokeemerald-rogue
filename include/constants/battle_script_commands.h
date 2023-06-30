@@ -242,6 +242,8 @@
 #define VARIOUS_SET_BEAK_BLAST                      151
 #define VARIOUS_SWAP_SIDE_STATUSES                  152
 #define VARIOUS_SET_Z_EFFECT                        153
+#define VARIOUS_CAN_TELEPORT                        154
+#define VARIOUS_GET_BATTLER_SIDE                    155
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0
