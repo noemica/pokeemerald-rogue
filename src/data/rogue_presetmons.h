@@ -29009,21 +29009,21 @@ static const struct RogueMonPreset sRoguePresets_GLACEON[] =
 	{
 		.flags = MON_FLAGS_GEN7PU,
 		.hiddenPowerType = TYPE_FIGHTING,
-		.abilityNum = ABILITY_SNOW_CLOAK,
+		.abilityNum = ABILITY_ICE_BODY,
 		.heldItem = ITEM_NORMALIUM_Z,
 		.moves = { MOVE_CELEBRATE, MOVE_ICE_BEAM, MOVE_HIDDEN_POWER, MOVE_SHADOW_BALL}
 	},
 	{
 		.flags = MON_FLAGS_GEN7ZU,
 		.hiddenPowerType = TYPE_GROUND,
-		.abilityNum = ABILITY_SNOW_CLOAK,
+		.abilityNum = ABILITY_ICE_BODY,
 		.heldItem = ITEM_CHOICE_SPECS,
 		.moves = { MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_HIDDEN_POWER, MOVE_BLIZZARD}
 	},
 	{
 		.flags = MON_FLAGS_GEN7ZU,
 		.hiddenPowerType = TYPE_GROUND,
-		.abilityNum = ABILITY_SNOW_CLOAK,
+		.abilityNum = ABILITY_ICE_BODY,
 		.heldItem = ITEM_NORMALIUM_Z,
 		.moves = { MOVE_CELEBRATE, MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_HIDDEN_POWER}
 	},
