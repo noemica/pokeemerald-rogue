@@ -4496,14 +4496,7 @@ BattleScript_TripleKickLoop::
 BattleScript_DoTripleKickAttack::
 	accuracycheck BattleScript_TripleKickNoMoreHits, ACC_CURR_MOVE
 	movevaluescleanup
-	jumpifmove MOVE_SURGING_STRIKES, EffectTripleKick_DoDmgCalcs    @ no power boost each hit
-	jumpifmove MOVE_TRIPLE_AXEL, EffectTripleKick_TripleAxelBoost   @ triple axel gets +20 power
-	addbyte sTRIPLE_KICK_POWER, 10                                  @ triple kick gets +10 power
-	goto EffectTripleKick_DoDmgCalcs
-EffectTripleKick_TripleAxelBoost:
-	addbyte sTRIPLE_KICK_POWER, 20
 EffectTripleKick_DoDmgCalcs:
-	addbyte sTRIPLE_KICK_POWER, 10
 	addbyte sMULTIHIT_STRING + 4, 1
 	critcalc
 	damagecalc
@@ -4522,6 +4515,15 @@ EffectTripleKick_DoDmgCalcs:
 	waitmessage 1
 	moveendto MOVEEND_NEXT_TARGET
 	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FOE_ENDURED, BattleScript_TripleKickPrintStrings
+	jumpifmove MOVE_TRIPLE_AXEL, EffectTripleKick_TripleAxelBoost   @ triple axel gets +20 power
+	jumpifmove MOVE_TRIPLE_KICK, EffectTripleKick_TripleKickBoost   @ triple kick gets +10 power
+	goto EffectTripleKick_TryLoop
+EffectTripleKick_TripleKickBoost:
+	addbyte sTRIPLE_KICK_POWER, 10                                  
+	goto EffectTripleKick_TryLoop
+EffectTripleKick_TripleAxelBoost:
+	addbyte sTRIPLE_KICK_POWER, 20
+EffectTripleKick_TryLoop:
 	decrementmultihit BattleScript_TripleKickLoop
 	goto BattleScript_TripleKickPrintStrings
 BattleScript_TripleKickNoMoreHits::
