@@ -30983,9 +30983,9 @@ static const struct RogueMonPreset sRoguePresets_DELIBIRD[] =
 	{
 		.flags = MON_FLAGS_GEN7PU,
 		.hiddenPowerType = TYPE_NONE,
-		.abilityNum = ABILITY_VITAL_SPIRIT,
-		.heldItem = ITEM_FOCUS_SASH,
-		.moves = { MOVE_SPIKES, MOVE_RAPID_SPIN, MOVE_ICY_WIND, MOVE_DESTINY_BOND}
+		.abilityNum = ABILITY_HUSTLE,
+		.heldItem = ITEM_CHOICE_BAND,
+		.moves = { MOVE_AERIAL_ACE, MOVE_ICE_SHARD, MOVE_ICE_PUNCH, MOVE_BRICK_BREAK }
 	},
 };
 
