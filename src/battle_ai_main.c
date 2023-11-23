@@ -1553,7 +1553,8 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                 score += 5;
             break;
         case EFFECT_TELEPORT:
-            score -= 10;
+            if (ShouldSwitch())
+                score += 5;
             break;
         case EFFECT_FAKE_OUT:
             if (!gDisableStructs[battlerAtk].isFirstTurn)
